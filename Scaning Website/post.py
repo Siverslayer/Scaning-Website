@@ -8,7 +8,7 @@ def request(url):
     except requests.exceptions.ConnectionError:
         pass
     
-target_url = "http://192.168.75.134/mutillidae/index.php?page=dns-lookup.php"
+target_url = "XXX"
 response = requests(target_url)
 
 parsed_html = BeautifulSoup(response.content.decode(), "html.parser")
@@ -28,7 +28,7 @@ for form in forms_list:
         input_value = input.get("value")
         
         if input_type == "text":
-            input_value = "s7ee7.com"
+            input_value = "XXX"
             
         post_data[input_name] = input_value
     
